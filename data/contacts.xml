@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+  <datacount>1</datacount>
+  <data>
+    <header>Контактная информация</header>
+    <description>Страница с контактами</description>
+    <date></date>
+    <text>
+      [p][bl]Вы можете связаться с нами любым удобным способом:[/p]
+      [p][b]Адрес:[/b] г. Киев, ул. Пушкина, 10, каб. 405[/p]
+      [p][b]Телефон:[/b] +38 (099) 123-45-67[/p]
+      [p][b]E-mail:[/b] info@example.com[/p]
+      [p][b]Часы работы:[/b] Пн-Пт с 9:00 до 18:00[/p]
+      [p][b]Социальные сети:[/b][/p]
+      [ul]
+        [li][url=https://t.me/example]Telegram[/url][/li]
+        [li][url=https://instagram.com/example]Instagram[/url][/li]
+        [li][url=https://facebook.com/example]Facebook[/url][/li]
+      [/ul]
+      [p][bl]Для получения дополнительной информации вы можете заполнить форму обратной связи на сайте.[/p]
+    </text>
+  </data>
+</root>

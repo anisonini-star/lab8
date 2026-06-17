@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="description" content="Работа с DOM деревом">
+    <title>Работа с DOM - Мой первый простой сайт</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <style>
+        .color {
+            background-color: gray;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        function format() {
+            // получаем номер выбранного переключателя
+            var opt = document.getElementsByName('R1');
+            var key = 0;
+            for (var i = 0; i < opt.length; i++) {
+                if (opt[i].checked) {
+                    key = i;
+                    break;
+                }
+            }
+            
+            // обрабатываем выбранный переключатель
+            switch (key) {
+                case 0: // первая задача - нечетные абзацы серым цветом
+                    var p = document.getElementsByTagName('p');
+                    for (var i = 0; i < p.length; i++) {
+                        if (i % 2 == 0) {
+                            p[i].className = 'color';
+                        }
+                    }
+                    break;
+                    
+                case 1: // вторая задача - первые строки списков размером 28px
+                    var ul = document.getElementsByTagName('ul');
+                    for (var i = 0; i < ul.length; i++) {
+                        if (ul[i].children[0]) {
+                            ul[i].children[0].style.fontSize = '28px';
+                        }
+                    }
+                    break;
+                    
+                case 2: // третья задача - нечетные элементы списков в красную рамку
+                    var ul = document.getElementsByTagName('ul');
+                    for (var i = 0; i < ul.length; i++) {
+                        var li = ul[i].getElementsByTagName('li');
+                        for (var j = 0; j < li.length; j++) {
+                            if (j % 2 == 0) {
+                                li[j].style.cssText = 'border: solid 1px red';
+                            }
+                        }
+                    }
+                    break;
+                    
+                case 3: // четвертая задача - замена содержимого span
+                    var span = document.getElementsByTagName('span');
+                    var text = prompt('Введите текст:');
+                    if (text != null && text != '') {
+                        for (var i = 0; i < span.length; i++) {
+                            span[i].innerHTML = text;
+                            span[i].style.color = 'blue';
+                        }
+                    }
+                    break;
+            }
+        }
+        
+        function append() {
+            // получаем последний список
+            var ul = document.getElementsByTagName('ul');
+            var lastUl = ul[ul.length - 1];
+            var text = prompt('Введите текст для нового пункта списка:');
+            if (text != '' && text != null) {
+                var li = document.createElement('li');
+                li.innerHTML = text;
+                lastUl.appendChild(li);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="secret.html">Секретная страница</a></li>
+                <li><a href="sum.html">Сумматор</a></li>
+                <li><a href="calculator.html">Web-калькулятор</a></li>
+                <li><a href="dom.html">Работа с DOM</a></li>
+                <li><a href="spoyler.html">Спойлер</a></li>
+                <li><a href="table.html">Таблица</a></li>
+            </ul>
+        </div>
+        
+        <div id="right">
+            <h2>Работа с DOM деревом</h2>
+            
+            <p>В 1992 году компания Nombas (впоследствии приобретённая Openwave) начала разработку встраиваемого скриптового языка Cmm (Си-минус-минус), который, по замыслу разработчиков, должен был стать достаточно мощным, чтобы заменить макросы, сохраняя при этом схожесть с Си, чтобы разработчикам не составляло труда изучить его. Главным отличием от Си была работа с памятью.</p>
+            
+            <p>В новом языке всё управление памятью осуществлялось автоматически: не было необходимости создавать буферы, объявлять переменные, осуществлять преобразование типов. В остальном языки сильно походили друг на друга: в частности, Cmm поддерживал стандартные функции и операторы Си. Cmm был переименован в ScriptEase, поскольку исходное название звучало слишком негативно, а упоминание в нём Си "отпугивало" людей.</p>
+            
+            <p>Поскольку требования были размыты, Айка перевели в группу, ответственную за серверные продукты, где он проработал месяц, занимаясь улучшением протокола HTTP. В мае разработчик был переброшен обратно, в команду, занимающуюся клиентской частью (браузером), где он немедленно начал разрабатывать концепцию нового языка программирования. Менеджмент разработки браузера был убеждён, что Netscape должен поддерживать язык программирования, встраиваемый в <span>HTML</span>-код страницы.</p>
+            
+            <p>Несмотря на схожий с Си синтаксис, JavaScript по сравнению с языком Си имеет коренные отличия:</p>
+            
+            <ul>
+                <li>объекты, с возможностью интроспекции;</li>
+                <li>функции как объекты первого класса;</li>
+                <li>автоматическое приведение типов;</li>
+                <li>автоматическая сборка мусора;</li>
+                <li>анонимные функции.</li>
+            </ul>
+            
+            <p>Объектная модель документа — интерфейс программирования приложений для <span>HTML</span> и XML-документов. Согласно DOM, документ (например, веб-страница) может быть представлен в виде дерева объектов, обладающих рядом свойств, которые позволяют производить с ним различные манипуляции:</p>
+            
+            <ul>
+                <li>генерация и добавление узлов,</li>
+                <li>получение узлов,</li>
+                <li>изменение узлов,</li>
+                <li>изменение связей между узлами,</li>
+                <li>удаление узлов.</li>
+            </ul>
+            
+            <hr>
+            
+            <h3>Выберите операцию:</h3>
+            <input type="radio" name="R1" value="V1" checked>1-я задача (нечетные абзацы серым цветом)<br>
+            <input type="radio" name="R1" value="V2">2-я задача (первые строки списков размером 28px)<br>
+            <input type="radio" name="R1" value="V3">3-я задача (нечетные элементы списков в рамку)<br>
+            <input type="radio" name="R1" value="V4">4-я задача (замена содержимого span)<br>
+            
+            <p>
+                <input type="button" name="b1" value="Выполнить" onclick="format()">
+                <input type="button" name="b2" value="Добавить пункт в конец последнего списка" onclick="append()">
+            </p>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

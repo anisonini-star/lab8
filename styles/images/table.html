@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="description" content="Таблица с числовыми данными">
+    <title>Таблица - Мой первый простой сайт</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <script type="text/javascript">
+        function cols() {
+            // получаем таблицу по id
+            var tbl = document.getElementById('tbl1');
+            // получаем массив строк таблицы
+            var row = tbl.getElementsByTagName('tr');
+            
+            // в цикле проходим по всем строкам
+            for (var i = 0; i < row.length; i++) {
+                // для i-й строки получаем массив ее столбцов
+                var col = row[i].getElementsByTagName('td');
+                // вначале сумма элементов в строке = 0
+                var s = 0;
+                // проходим по всем столбцам строки кроме последнего
+                for (var j = 0; j < col.length - 1; j++) {
+                    // если в ячейке число, то суммируем его
+                    var val = parseInt(col[j].innerHTML);
+                    if (!isNaN(val)) {
+                        s += val;
+                    }
+                }
+                // в последнюю ячейку строки записываем найденную сумму
+                col[col.length - 1].innerHTML = s;
+                // если сумма в строке четная, заливаем строку светло-серым цветом
+                if (s % 2 == 0) {
+                    row[i].style.backgroundColor = 'lightgray';
+                } else {
+                    row[i].style.backgroundColor = 'lightblue';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="secret.html">Секретная страница</a></li>
+                <li><a href="sum.html">Сумматор</a></li>
+                <li><a href="calculator.html">Web-калькулятор</a></li>
+                <li><a href="dom.html">Работа с DOM</a></li>
+                <li><a href="spoyler.html">Спойлер</a></li>
+                <li><a href="table.html">Таблица</a></li>
+            </ul>
+        </div>
+        
+        <div id="right">
+            <h2>Таблица с числовыми данными</h2>
+            
+            <table width="200" border="1" id="tbl1">
+                <tr>
+                    <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td></td>
+                </tr>
+                <tr>
+                    <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td></td>
+                </tr>
+                <tr>
+                    <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td></td>
+                </tr>
+                <tr>
+                    <td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td></td>
+                </tr>
+                <tr>
+                    <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td></td>
+                </tr>
+                <tr>
+                    <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td>
+                </tr>
+                <tr>
+                    <td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td></td>
+                </tr>
+                <tr>
+                    <td>36</td><td>37</td><td>38</td><td>39</td><td>40</td><td></td>
+                </tr>
+                <tr>
+                    <td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td></td>
+                </tr>
+                <tr>
+                    <td>46</td><td>47</td><td>48</td><td>49</td><td>50</td><td></td>
+                </tr>
+            </table>
+            
+            <p><input type="button" value="Вычислить суммы строк и подсветить" onclick="cols()"></p>
+            
+            <p><strong>Пояснение:</strong> При нажатии на кнопку в последний столбец каждой строки будет записана сумма чисел в этой строке. Строки с четной суммой закрашиваются светло-серым цветом, с нечетной - светло-голубым.</p>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

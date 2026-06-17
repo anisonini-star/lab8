@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="description" content="Спойлер - скрываемый блок с текстом">
+    <title>Спойлер - Мой первый простой сайт</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <style>
+        /* стиль главного блока */
+        #wrapper {
+            margin: 0px auto;
+        }
+        
+        /* стиль спойлера */
+        #spoyler {
+            font: 10px Verdana, Geneva, sans-serif;
+            background: #999;
+            padding: 5px;
+            border: 1px solid #000;
+            margin-left: 20px;
+            display: none;
+        }
+        
+        /* стиль кнопки внутри главного блока */
+        #wrapper input {
+            font-size: 9px;
+            height: 15px;
+            width: 15px;
+            padding: 0px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        function spoyler() {
+            // получаем ссылку на кнопку
+            var button = document.getElementById('b1');
+            // получаем ссылку на блок спойлера
+            var split = document.getElementById('spoyler');
+            // если на кнопке надпись "+"
+            if (button.value == '+') {
+                // отображаем спойлер
+                split.style.display = 'block';
+                // меняем надпись на "-"
+                button.value = '-';
+            } else {
+                split.style.display = 'none';
+                button.value = '+';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="secret.html">Секретная страница</a></li>
+                <li><a href="sum.html">Сумматор</a></li>
+                <li><a href="calculator.html">Web-калькулятор</a></li>
+                <li><a href="dom.html">Работа с DOM</a></li>
+                <li><a href="spoyler.html">Спойлер</a></li>
+                <li><a href="table.html">Таблица</a></li>
+            </ul>
+        </div>
+        
+        <div id="right">
+            <h2>Спойлер</h2>
+            
+            <div id="wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+                
+                <input id="b1" name="bl" type="button" value="+">
+                
+                <div id="spoyler">
+                    Duaa moa osarena nesemnoi radostbo, kak oti yucdeshe vecenine ytra, kotopbmi a nasladaobc ot vecoro cepdka. A coccm odin i blaxenctbvo b zsedhem kpao, csobo cozdannom dja takax, kak a. Tak cactnib, moi dprt, tak ypoen ouuienem pokoa, hto uckyctbo moe cpaaet ot oto. H oonoro ntrnxa he mop b a cdeatb, a hikogda he bbl takim boblmm xydoxhukom, kak b oti mhutyb. Kogda oot miolo moe dolnus podnmaetca nap i polndbeneo colnne ctoit nad hepnohuaemoi auei temnoro leca i nusb peckniy ypckasbuaet b eo cbaa cbaa, a jeay b bscokoi tpaae y bchtoro pybka i, npiabnyb k zemel, bixy tscaai bcebomxhbix bllukon i ybctbvo, kak bllok moemy cepdky kpoehehbi mipok, hto cnyet meky ctebeblkaami, habloaao oti heicnchcimble, henotcuxmble pasobnndoctni cepbako b mokeh i ybctbvo bllocotb, cozabueo hac no cboem ypodobio, beahe bceoobueo, cozabueo ham papib b beuhom blaaxenctbe, kogda bop moi ymaunicta i bce bopry mera i hebo nao mhoi aapehatlenb b moei dyue, tohno oopas bozlooheno, - togda, doporoii dprt, meha chcto tomnt mhclb: "Ax! Kak bbi bpaaistb, kak bi bdxoaytb b pucnyok to, hto tak polno, tak tepetno xibet bo me, aapehatletb otpaaxenie moei dyu, kak dyua moa - otpaaxenie ppebeyhono boga!"
+                </div>
+                
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cars dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, olanidit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+            </div>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
