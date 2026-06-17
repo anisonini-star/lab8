@@ -1,17 +1,19 @@
 <?php
-// Массив пользователей с дополнительной информацией (email)
 $users = array(
     "admin" => array(
-        "pwd" => "123456",
-        "email" => "admin@example.com"
+        "pwd" => "12345",
+        "email" => "admin@example.com",
+        "fullname" => "Администратор сайта"
     ),
     "user" => array(
         "pwd" => "qwerty",
-        "email" => "user@example.com"
+        "email" => "user@example.com",
+        "fullname" => "Иванов Иван Иванович"
     ),
-    "test" => array(
-        "pwd" => "test123",
-        "email" => "test@example.com"
+    "demo" => array(
+        "pwd" => "demo123",
+        "email" => "demo@test.com",
+        "fullname" => "Петров Петр Петрович"
     )
 );
 ?>
