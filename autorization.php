@@ -1,18 +1,21 @@
- <?php if($_SESSION["autorized"] != true) { ?>
-   <h2>Вход</h2>
+<?php if($_SESSION["autorized"] != true) { ?>
+   <h2>РђРІС‚РѕСЂРёР·Р°С†РёСЏ</h2>
    <form method="post">
-   Пользователь: 
+   РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: 
    <div align="right"><input name="login" type="text"></div>  
-   Пароль: 
+   РџР°СЂРѕР»СЊ: 
    <div align="right"><input name="pwd" type="password"></div>
-   <div align="right"><input name="ok" type="submit" value="Войти"></div>
+   <div align="right"><input name="ok" type="submit" value="Р’РѕР№С‚Рё"></div>
    </form>
  <?php } 
    else {
 ?>
-<h2>Пользователь:</h2>
+<h2>РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ:</h2>
 <p align = "center">
 <?php echo $_SESSION["user"]; ?>
 </p>
-<div align="center"><a href="index.php?action=exit">Выйти</a></div>
+<p align = "center">
+Email: <?php echo $_SESSION["email"]; ?>
+</p>
+<div align="center"><a href="index.php?action=exit">Р’С‹Р№С‚Рё</a></div>
    <?php } ?>
