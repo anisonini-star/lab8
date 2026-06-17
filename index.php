@@ -5,7 +5,6 @@
 
 <html>
 <head>
-  <base href="http://lab8/">
   <meta http-equiv="content-type" content="text/html; charset=windows-1251">
   <title>Мой первый простой сайт</title>
   <link rel=STYLESHEET type="text/css" href="/styles/style.css"> 
